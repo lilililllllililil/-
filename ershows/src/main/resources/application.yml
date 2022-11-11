@@ -1,0 +1,34 @@
+spring:
+  #配置数据源信息
+  datasource:
+    #配置数据源类型
+    type: com.zaxxer.hikari.HikariDataSource
+    #配置连接数据库的各个信息
+    url: jdbc:mysql://127.0.0.1:3306/erShow?useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 147258
+    username: root
+  mail:
+    host: smtp.qq.com
+    username: 1782252415@qq.com
+    password: vrnadmslyhwyfaig
+  redis:
+    host: 124.222.8.251
+    port: 6379
+    password: 123321
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+
+server:
+  port: 8081
+
+
+mybatis-plus:
+  configuration:
+    #输出SQL语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:/mapper/**/*.xml #默认路径
